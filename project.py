@@ -48,7 +48,7 @@ corpus = ""
 with open(textname, 'r', encoding= 'utf-8') as text:
     for line in text.readlines():
         corpus += line
-epochs = 1000
+epochs = 100
   
 training_data = preprocessing(corpus) 
 w2v = word2vec.word2vec() 

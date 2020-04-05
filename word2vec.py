@@ -48,7 +48,8 @@ class word2vec(object):
         self.W = self.W - self.alpha*dLdW 
            
     def train(self,epochs): 
-        for x in range(1,epochs):         
+        for x in range(1,epochs):     
+            print('current epoch: ', x)    
             self.loss = 0
             for j in range(len(self.X_train)): 
                 self.feed_forward(self.X_train[j]) 

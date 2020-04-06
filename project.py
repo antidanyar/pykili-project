@@ -6,15 +6,14 @@ filename = 'embeddings.txt'
 
 textname = 'text.txt'
 
-def preprocessing(corpus): 
+def preprocessing(corpus):
     stop_words = set(stopwords.words('english'))     
     training_data = [] 
     sentences = corpus.split(".") 
     for i in range(len(sentences)): 
         sentences[i] = sentences[i].strip() 
         sentence = sentences[i].split() 
-        x = [word.strip(string.punctuation) for word in sentence 
-                                     if word not in stop_words] 
+        x = [word.strip(string.punctuation) for word in sentence if word not in stop_words] 
         x = [word.lower() for word in x] 
         training_data.append(x) 
     return training_data 
@@ -48,7 +47,8 @@ corpus = ""
 with open(textname, 'r', encoding= 'utf-8') as text:
     for line in text.readlines():
         corpus += line
-epochs = 100
+corpus = corpus[1:]
+epochs = 500
   
 training_data = preprocessing(corpus) 
 w2v = word2vec.word2vec() 

@@ -1,7 +1,0 @@
-adults 0
-broccoli 1
-children 2
-do 3
-know 4
-love 5
-means 6

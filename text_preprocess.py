@@ -1,5 +1,5 @@
-import sys
-import os
+import sys #как можно догадаться этот кусок кода не мой
+import os #его RusVectores выложили, за что им большое спасибо
 import wget
 import re
 from ufal.udpipe import Model, Pipeline

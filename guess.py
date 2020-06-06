@@ -71,6 +71,7 @@ def get_percentage(topic_file, model, topics):
     return topic_similarity.items()
 
 def demonstration():
+    print('чем ближе к 1.0, тем ближе текст к теме')
     test_files = ['CHEM_text.txt', 'LING_text.txt', 'CS_text.txt', 'PHYS_text.txt']
     model = get_model()
     for test_file in test_files:
